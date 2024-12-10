@@ -1,0 +1,179 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh; /* Full viewport height */
+    color: #2c2c2c;
+}
+
+/* Header styling */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700; /* Bolder title */
+    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #777777;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 80px; /* Below the header */
+    bottom: 70px; /* Above the button */
+    width: 100%;
+    padding: 0 10px;
+}
+
+/* Content styling */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between the image and quote */
+    flex-wrap: wrap; /* Stack on smaller screens */
+}
+
+/* Image styling */
+img {
+    max-height: 60vh; /* Limit image height */
+    max-width: 50%; /* Prevents image from being too wide */
+    width: auto; /* Maintains aspect ratio */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+/* Quote container styling */
+#quote-container {
+    flex: 1; /* Allow quote container to adapt based on available space */
+    max-width: 40%; /* Prevent quote from being too wide */
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left */
+}
+
+#quote {
+    font-size: 1.6em; /* Larger font size */
+    font-weight: 700; /* Bold font */
+    color: #444444;
+    margin: 0;
+    line-height: 1.2; /* Reduced line spacing for multiline quotes */
+}
+
+/* Refresh button styling */
+.refresh-button {
+    position: fixed; /* Fix button at the bottom of the screen */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Center button horizontally */
+    padding: 12px 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #ffffff;
+    background: #333333; /* Minimal dark background */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.refresh-button:hover {
+    background: #000000; /* Slightly darker hover effect */
+    transform: translate(-50%, -3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.refresh-button:active {
+    transform: translate(-50%, 0); /* Reset transform on click */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Dedication styling */
+.dedication {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.9em; /* Small and subtle */
+    font-weight: 500; /* Slightly bold for elegance */
+    color: #888888; /* Soft gray color */
+    font-style: italic;
+    text-align: right;
+    opacity: 0.7; /* Slight transparency for subtlety */
+}
+
+.dedication:hover {
+    opacity: 1; /* Full visibility on hover */
+    color: #333333; /* Darker color on hover */
+}

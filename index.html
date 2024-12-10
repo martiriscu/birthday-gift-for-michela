@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Mescal Inspiration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Feeling Paul-sitive Today?</h1>
+        <h2>Your dose of daily inspiration</h2>
+    </div>
+    <div class="container">
+        <div class="content">
+            <img id="image" alt="Paul Mescal" onclick="expandImage()">
+            <div id="quote-container">
+                <p id="quote">Loading...</p>
+            </div>
+        </div>
+        <button class="refresh-button" onclick="refreshPage()">Show Another</button>
+    </div>
+
+    <!-- Fullscreen Image Modal -->
+    <div id="image-modal" class="modal" onclick="closeImage(event)">
+        <span id="close-btn" onclick="closeImage(event)">&times;</span>
+        <img id="full-image" src="" alt="Full Screen">
+    </div>
+
+    <!-- Dedication -->
+    <div class="dedication">Made with love for Michela. Happy Birthday!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
